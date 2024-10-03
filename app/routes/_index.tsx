@@ -2,8 +2,12 @@ import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Radio:Otherway" },
+    {
+      name: "description",
+      content:
+        "Irish based radio station, broadcasting a varied selection of shows with some of the best Irish DJ talent!",
+    },
   ];
 };
 
