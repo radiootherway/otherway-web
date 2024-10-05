@@ -1,3 +1,11 @@
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/remix";
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
@@ -61,6 +69,29 @@ export default function Index() {
                       Instagram
                     </span>
                   </a>
+                </div>
+                <div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                  <div>
+                    <h2>{"DJ's"} - sign in here </h2>
+                  </div>
+                  <div className="flex flex-col">
+                    <SignedIn>
+                      <p>You are signed in!</p>
+                      <div>
+                        <p>View your profile here</p>
+                        <UserButton />
+                      </div>
+                      <div>
+                        <SignOutButton />
+                      </div>
+                    </SignedIn>
+                    <SignedOut>
+                      <p>You are signed out</p>
+                      <div>
+                        <SignInButton />
+                      </div>
+                    </SignedOut>
+                  </div>
                 </div>
               </div>
             </div>
