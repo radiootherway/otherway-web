@@ -34,13 +34,13 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="relative pt-36 ml-auto">
               <div className="lg:w-2/3 text-center mx-auto">
-                <h1 className="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
+                <h1 className=" font-bold text-5xl md:text-6xl xl:text-7xl">
                   Radio{" "}
-                  <span className="text-primary dark:text-white">
+                  <span className="text-primary ">
                     otherway.
                   </span>
                 </h1>
-                <p className="mt-8 text-gray-700 dark:text-gray-300">
+                <p className="mt-8  ">
                   Irish based radio station, broadcasting a varied selection of
                   shows with some of the best Irish DJ talent
                 </p>
@@ -70,27 +70,25 @@ export default function Index() {
                     </span>
                   </a>
                 </div>
-                <div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                  <div>
-                    <h2>{"DJ's"} - sign in here </h2>
-                  </div>
-                  <div className="flex flex-col">
-                    <SignedIn>
-                      <p>You are signed in!</p>
+                <div className="mt-16 sm:mt-24 lg:col-span-6 lg:mt-0 flex flex-wrap">
+                  <div className="sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden sm:rounded-lg">
+                    <div className="px-4 py-8 sm:px-10">
                       <div>
-                        <p>View your profile here</p>
-                        <UserButton />
+                        <p className="text-sm font-medium ">
+                          Sign in with..
+                        </p>
+                        <div className="mt-1 ">
+                          <div>
+                            <SignedOut>
+                              <SignInButton />
+                            </SignedOut>
+                            <SignedIn>
+                              <SignOutButton />
+                            </SignedIn>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <SignOutButton />
-                      </div>
-                    </SignedIn>
-                    <SignedOut>
-                      <p>You are signed out</p>
-                      <div>
-                        <SignInButton />
-                      </div>
-                    </SignedOut>
+                    </div>
                   </div>
                 </div>
               </div>
