@@ -1,3 +1,11 @@
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/remix";
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
@@ -26,13 +34,13 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="relative pt-36 ml-auto">
               <div className="lg:w-2/3 text-center mx-auto">
-                <h1 className="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
+                <h1 className=" font-bold text-5xl md:text-6xl xl:text-7xl">
                   Radio{" "}
-                  <span className="text-primary dark:text-white">
+                  <span className="text-primary ">
                     otherway.
                   </span>
                 </h1>
-                <p className="mt-8 text-gray-700 dark:text-gray-300">
+                <p className="mt-8  ">
                   Irish based radio station, broadcasting a varied selection of
                   shows with some of the best Irish DJ talent
                 </p>
@@ -61,6 +69,27 @@ export default function Index() {
                       Instagram
                     </span>
                   </a>
+                </div>
+                <div className="mt-16 sm:mt-24 lg:col-span-6 lg:mt-0 flex flex-wrap">
+                  <div className="sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden sm:rounded-lg">
+                    <div className="px-4 py-8 sm:px-10">
+                      <div>
+                        <p className="text-sm font-medium ">
+                          Sign in with..
+                        </p>
+                        <div className="mt-1 ">
+                          <div>
+                            <SignedOut>
+                              <SignInButton />
+                            </SignedOut>
+                            <SignedIn>
+                              <SignOutButton />
+                            </SignedIn>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
