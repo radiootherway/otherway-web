@@ -31,6 +31,7 @@ import {
   Heart,
   Undo2,
   LoaderCircle,
+  Calendar,
 } from "lucide-react";
 import {
   SiFacebook as Facebook,
@@ -40,6 +41,7 @@ export type Icon = typeof LucideIcon;
 export const Icons = {
   close: X,
   spinner: Loader2,
+  calendar: Calendar,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   trash: Trash,

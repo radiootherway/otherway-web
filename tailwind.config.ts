@@ -7,7 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          'Inter"',
+          "Josefin Sans",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
