@@ -18,7 +18,10 @@ const CalendarWidget: React.FC<CalendarWidgetProps> = ({ entries }) => {
       <CardContent className="grid gap-6">
         {entries ? (
           entries.map((entry) => (
-            <div className="flex items-center justify-between space-x-4">
+            <div
+              className="flex items-center justify-between space-x-4"
+              key={entry.id}
+            >
               <div className="flex items-center space-x-4">
                 <Avatar className="w-8 h-8">
                   <AvatarImage src="/avatars/03.png" alt="@shadcn" />

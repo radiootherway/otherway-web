@@ -12,7 +12,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@clerk/remix": "^4.2.35",
+    "@clerk/remix": "^4.2.36",
     "@icons-pack/react-simple-icons": "^10.0.0",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -27,7 +27,7 @@
     "date-fns": "^4.1.0",
     "googleapis": "^144.0.0",
     "isbot": "^5.1.17",
-    "lucide-react": "^0.447.0",
+    "lucide-react": "^0.451.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remix-themes": "^1.5.1",
@@ -37,9 +37,9 @@
   "devDependencies": {
     "@remix-run/dev": "^2.12.1",
     "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.8.0",
-    "@typescript-eslint/parser": "^8.8.0",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
     "eslint-import-resolver-typescript": "^3.6.3",
@@ -49,7 +49,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2",
+    "typescript": "^5.6.3",
     "vite": "^5.4.8",
     "vite-tsconfig-paths": "^5.0.1"
   },

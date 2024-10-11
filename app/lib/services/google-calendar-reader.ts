@@ -3,7 +3,6 @@ import CalendarEntry from "~/lib/models/calendar-entry";
 import calendar, { GOOGLE_CALENDAR_ID } from "~/lib/services/google-calendar";
 
 const getCalendarEntries = async (): Promise<CalendarEntry[]> => {
-  console.log("google-calendar-reader", "getting events", GOOGLE_CALENDAR_ID);
   const e = await calendar.events.list({
     calendarId: GOOGLE_CALENDAR_ID,
     singleEvents: false,
