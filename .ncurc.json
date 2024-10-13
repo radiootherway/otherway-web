@@ -1,0 +1,11 @@
+{
+  "reject": [
+    "eslint",
+    "eslint-plugin-react-hooks",
+    "typescript",
+    "@types/eslint",
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "eslint-config-next"
+  ]
+}

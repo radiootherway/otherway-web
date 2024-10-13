@@ -1,3 +1,5 @@
+import { siteConfig } from "~/config/site";
+
 export default function Privacy() {
   return (
     <div className="mx-12 my-8">
@@ -105,13 +107,14 @@ export default function Privacy() {
         </li>
         <li>
           <p>
-            <strong>Website</strong> refers to Radio Otherway, accessible from{" "}
+            <strong>Website</strong> refers to {siteConfig.name}, accessible
+            from{" "}
             <a
-              href="https://radiootherway.com"
+              href={siteConfig.url}
               rel="external nofollow noopener noreferrer"
               target="_blank"
             >
-              https://radiootherway.com
+              {siteConfig.url}
             </a>
           </p>
         </li>
@@ -190,7 +193,8 @@ export default function Privacy() {
         You can learn more about cookies on{" "}
         <a
           href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           TermsFeed website
         </a>{" "}
@@ -276,10 +280,11 @@ export default function Privacy() {
           <p>
             <strong>To contact You:</strong> To contact You by email, telephone
             calls, SMS, or other equivalent forms of electronic communication,
-            such as a mobile {"application's"} push notifications regarding updates
-            or informative communications related to the functionalities,
-            products or contracted services, including the security updates,
-            when necessary or reasonable for their implementation.
+            such as a mobile {"application's"} push notifications regarding
+            updates or informative communications related to the
+            functionalities, products or contracted services, including the
+            security updates, when necessary or reasonable for their
+            implementation.
           </p>
         </li>
         <li>
@@ -372,7 +377,8 @@ export default function Privacy() {
       </p>
       <h3>Transfer of Your Personal Data</h3>
       <p>
-        Your information, including Personal Data, is processed at the {"Company's"}
+        Your information, including Personal Data, is processed at the{" "}
+        {"Company's"}
         operating offices and in any other places where the parties involved in
         the processing are located. It means that this information may be
         transferred to — and maintained on — computers located outside of Your
@@ -469,8 +475,8 @@ export default function Privacy() {
       <p>
         Our Service may contain links to other websites that are not operated by
         Us. If You click on a third party link, You will be directed to that
-        third {"party's"} site. We strongly advise You to review the Privacy Policy
-        of every site You visit.
+        third {"party's"} site. We strongly advise You to review the Privacy
+        Policy of every site You visit.
       </p>
       <p>
         We have no control over and assume no responsibility for the content,
@@ -496,7 +502,7 @@ export default function Privacy() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: info@radiootherway.com</li>
+        <li>By email: {siteConfig.contactEmail}</li>
       </ul>
     </div>
   );

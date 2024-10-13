@@ -9,7 +9,8 @@ import type { LinksFunction, LoaderFunction } from "@remix-run/node";
 
 import "./tailwind.css";
 import { rootAuthLoader } from "@clerk/remix/ssr.server";
-import { ClerkApp } from "@clerk/remix";
+import { ClerkApp, ClerkProvider } from "@clerk/remix";
+import Navbar from "~/components/nav/navbar-component";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -35,9 +36,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <div className="relative flex min-h-screen flex-col bg-background">
+          <Navbar />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </div>
       </body>
     </html>
   );
