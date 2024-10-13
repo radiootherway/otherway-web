@@ -1,17 +1,17 @@
 import { google } from "googleapis";
 
-const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_CALENDAR_CREDENTIALS_PRIVATE_KEY;
-const GOOGLE_CLIENT_EMAIL =
-  process.env.GOOGLE_CALENDAR_CREDENTIALS_CLIENT_EMAIL;
+const credentials = JSON.parse(
+  Buffer.from(process.env.GOOGLE_CRENTIALS as string, "base64").toString()
+);
+console.log("google-calendar", "credentials", credentials);
+
 const GOOGLE_CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
 const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 
-console.log('google-calendar', 'env', process.env.GOOGLE_CALENDAR_CREDENTIALS_CLIENT_EMAIL);
-
 const jwtClient = new google.auth.JWT(
-  GOOGLE_CLIENT_EMAIL,
+  credentials.client_email,
   undefined,
-  GOOGLE_PRIVATE_KEY,
+  credentials.private_key,
   SCOPES
 );
 const calendar = google.calendar({
