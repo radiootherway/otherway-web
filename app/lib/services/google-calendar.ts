@@ -3,8 +3,6 @@ import { google } from "googleapis";
 const credentials = JSON.parse(
   Buffer.from(process.env.GOOGLE_CRENTIALS as string, "base64").toString()
 );
-console.log("google-calendar", "credentials", credentials);
-
 const GOOGLE_CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
 const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 

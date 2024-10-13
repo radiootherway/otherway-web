@@ -24,6 +24,7 @@ import {
   type Icon as LucideIcon,
   Terminal,
   LogIn,
+  LogOut,
   Upload,
   Menu,
   ThumbsUp,
@@ -62,6 +63,7 @@ export const Icons = {
   arrowRight: ArrowRight,
   help: HelpCircle,
   login: LogIn,
+  logout: LogOut,
   facebook: Facebook,
   instagram: Instagram,
 

@@ -1,4 +1,6 @@
+import MainNav from "~/components/nav/main-nav";
 import { buttonVariants } from "~/components/ui/button";
+import LoginComponent from "~/components/widgets/login-component";
 import { siteConfig } from "~/config/site";
 import { Icons } from "~/lib/icons";
 import { cn } from "~/lib/utils";
@@ -7,16 +9,19 @@ const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
-        {/* <MainNav />
-        <MobileNav /> */}
+        <MainNav />
+        {/* <MobileNav /> */}
 
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            Command Menu
-            {/* <CommandMenu /> */}
-          </div>
+          {/* <div className="w-full flex-1 md:w-auto md:flex-none">
+             <CommandMenu /> 
+          </div> */}
           <nav className="flex items-center">
-            <a href={siteConfig.links.instagram} target="_blank" rel="noreferrer">
+            <a
+              href={siteConfig.links.instagram}
+              target="_blank"
+              rel="noreferrer"
+            >
               <div
                 className={cn(
                   buttonVariants({
@@ -42,8 +47,7 @@ const Navbar: React.FC = () => {
                 <span className="sr-only">Twitter</span>
               </div>
             </a>
-            Mode Toggle
-            {/* <ModeToggle /> */}
+            <LoginComponent />
           </nav>
         </div>
       </div>

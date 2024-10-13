@@ -1,11 +1,12 @@
-import { SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/remix";
 import type { MetaFunction } from "@remix-run/node";
 import CalendarWidget from "~/components/widgets/calendar/calendar-widget";
 import IconLink from "~/components/widgets/icon-link";
 import { Icons } from "~/lib/icons";
 import { getCalendarEntries } from "~/lib/services/google-calendar-reader";
-import { json, useLoaderData } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import CalendarEntry from "~/lib/models/calendar-entry";
+import { siteConfig } from "~/config/site";
+import LoginComponent from "~/components/widgets/login-component";
 
 export const meta: MetaFunction = () => {
   return [
@@ -38,7 +39,7 @@ export default function Index() {
           <div className="relative pt-36 ml-auto">
             <div className="lg:w-2/3 text-center mx-auto">
               <h1 className=" font-bold text-5xl md:text-6xl xl:text-7xl text-foreground">
-                Radio <span className="text-primary ">Otherway.</span>
+                {siteConfig.name}
               </h1>
               <p className="mt-8 text-base text-muted-foreground">
                 Irish based radio station, broadcasting a varied selection of
@@ -71,12 +72,7 @@ export default function Index() {
                       <p className="text-sm font-medium ">Sign in with..</p>
                       <div className="mt-1 ">
                         <div>
-                          <SignedOut>
-                            <SignInButton />
-                          </SignedOut>
-                          <SignedIn>
-                            <SignOutButton />
-                          </SignedIn>
+                          <LoginComponent />
                         </div>
                       </div>
                     </div>
